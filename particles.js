@@ -12,9 +12,6 @@ document.body.appendChild(renderer.domElement);
 
 var particleCount = 20000,
     speed = 100, // How fast animation plays
-    scale = 150, // Scale of generated shape
-    vertex = 30, // Shape details
-    shapeRotation = 0.0005, // Rotation speed
     opacityControll = 0.3, // Opacity of particles
     sizeControll = 0.02, // Size of particles
     fps = 25; // Fps controll 
@@ -83,10 +80,6 @@ var particleSystem = new THREE.Points(
     pMaterial);
 // Add it to the scene
 scene.add(particleSystem);
-
-// Shape's geometries
-
-var geometry = new THREE.SphereGeometry(scale, vertex, vertex);
 
 // Max function
 function map_range(value, low1, high1, low2, high2) {
